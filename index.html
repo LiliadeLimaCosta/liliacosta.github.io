@@ -44,7 +44,6 @@ nav{
 }
 .nav-links a:hover{color:var(--gold)}
 
-/* Estilo especial para o LinkedIn no menu */
 .nav-links a.linkedin-menu {
   color: var(--gold);
   font-weight: 700;
@@ -121,7 +120,6 @@ nav{
 }
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
 
-/* Social proof logos */
 .hero-logos{
   margin-top:3rem;
   padding-top:2rem;
@@ -144,7 +142,6 @@ nav{
 .logo-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.3);border-color:rgba(201,168,76,0.5)}
 .logo-card img{height:26px;width:auto;max-width:100px;object-fit:contain;}
 
-/* Hero right — photo */
 .hero-right{
   position:relative;z-index:2;
   display:flex;justify-content:center;align-items:center;
@@ -287,11 +284,15 @@ section{padding:6rem 5%}
   box-shadow:0 16px 48px rgba(37,99,235,0.1);
 }
 .project-top{
-  height:130px;
+  height:180px;
   display:flex;align-items:center;justify-content:center;
   position:relative;overflow:hidden;
 }
-.pt-1{background:linear-gradient(135deg,#0F1F3D,#1E3A5F)}
+.project-top img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 .pt-2{background:linear-gradient(135deg,#1E3A5F,#2563EB)}
 .pt-3{background:linear-gradient(135deg,#1D4ED8,#3B82F6)}
 .pt-4{background:linear-gradient(135deg,#0F1F3D,#7C3AED)}
@@ -300,10 +301,11 @@ section{padding:6rem 5%}
 .project-emoji{font-size:2.8rem;position:relative;z-index:1}
 .project-company-badge{
   position:absolute;top:12px;right:12px;
-  background:rgba(255,255,255,0.15);backdrop-filter:blur(8px);
+  background:rgba(15, 31, 61, 0.6);backdrop-filter:blur(8px);
   color:white;font-size:0.68rem;font-weight:700;letter-spacing:0.06em;
   padding:0.25rem 0.65rem;border-radius:4px;
   border:1px solid rgba(255,255,255,0.2);
+  z-index:2;
 }
 .project-body{padding:1.5rem}
 .project-body h3{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:0.5rem}
@@ -357,7 +359,15 @@ section{padding:6rem 5%}
   font-family:'DM Serif Display',serif;
   font-size:2.2rem;
   color:var(--navy);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+}
+.modal-image {
+  width:100%;
+  max-height: 350px;
+  object-fit: cover;
+  margin: 15px 0 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
 }
 .modal-box h4 {
   margin-top:20px;
@@ -445,38 +455,18 @@ section{padding:6rem 5%}
 
 /* ── FOOTER ── */
 footer{
-  background:#07111F;
-  padding:1.8rem 5%;
-  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;
-  border-top:1px solid rgba(201,168,76,0.1);
+  background:var(--navy);padding:2rem 5%;
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid rgba(255,255,255,0.08);
 }
-footer p{color:rgba(255,255,255,0.25);font-size:0.78rem}
-footer a{color:var(--gold);text-decoration:none;font-size:0.78rem;opacity:0.7;transition:opacity 0.2s}
-footer a:hover{opacity:1}
-
-/* ── REVEAL ── */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.65s ease,transform 0.65s ease}
-.reveal.visible{opacity:1;transform:none}
-
-/* ── RESPONSIVE ── */
-@media(max-width:900px){
-  #hero{grid-template-columns:1fr;text-align:center;padding-top:7rem}
-  .hero-right{display:none}
-  .hero-desc{margin:0 auto 2.5rem}
-  .hero-actions{justify-content:center}
-  .logos-row{justify-content:center}
-  .about-grid,.contact-grid,.edu-grid{grid-template-columns:1fr;gap:2.5rem}
-  .about-metrics{grid-template-columns:1fr 1fr}
-}
-@media(max-width:600px){
-  .nav-links,.nav-cta{display:none}
-  .about-metrics{grid-template-columns:1fr 1fr}
-  .hero-name{font-size:2.6rem}
-}
+footer p{font-size:0.82rem;color:rgba(255,255,255,0.4)}
+footer a{color:var(--gold);text-decoration:none;font-size:0.82rem;font-weight:600}
+footer a:hover{color:var(--gold-light)}
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
 <div class="nav-brand">Lilia <span>Costa</span></div>
 <ul class="nav-links">
@@ -490,6 +480,7 @@ footer a:hover{opacity:1}
 <a class="nav-cta" href="mailto:liliagonsalves@hotmail.com.br">Contratar</a>
 </nav>
 
+<!-- HERO -->
 <section id="hero">
 <div class="hero-bg-lines"></div>
 <div class="hero-left">
@@ -538,6 +529,7 @@ footer a:hover{opacity:1}
 </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
 <div class="section-inner">
 <div class="about-grid">
@@ -594,6 +586,7 @@ footer a:hover{opacity:1}
 </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience">
 <div class="section-inner">
 <p class="eyebrow">Trajetória</p>
@@ -635,7 +628,7 @@ footer a:hover{opacity:1}
 <p class="timeline-company">Pepsico</p>
 <h3 class="timeline-role">Analista Power BI</h3>
 <p class="timeline-desc">
-          Desenvolvimento de Relatórios — utilizando Power BI e automação de bases, reduzindo o tempo de processamento de 12 hours para 2 hours.
+          Desenvolvimento de Relatórios — utilizando Power BI e automação de bases, reduzindo o tempo de processamento de 12 horas para 2 horas.
         </p>
 <div class="timeline-tags">
 <span class="timeline-tag">Power BI</span>
@@ -687,16 +680,19 @@ footer a:hover{opacity:1}
 </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
 <div class="section-inner">
 <p class="eyebrow">Cases</p>
 <h2 class="section-heading">Projetos em destaque</h2>
 <p class="section-sub">Soluções entregues em ambientes corporativos reais, com foco em resultado de negócio.</p>
 <div class="projects-grid">
+
+<!-- Card PepsiCo Atualizado -->
 <div class="project-card reveal" onclick="openModal('pepsico')">
-<div class="project-top pt-1">
-<span class="project-emoji">🏭</span>
+<div class="project-top">
 <span class="project-company-badge">PepsiCo</span>
+<img alt="Dashboard PepsiCo" src="mockup-pepsico.png"/>
 </div>
 <div class="project-body">
 <h3>Dashboard Logístico End-to-End</h3>
@@ -708,6 +704,7 @@ footer a:hover{opacity:1}
 </div>
 </div>
 </div>
+
 <div class="project-card reveal">
 <div class="project-top pt-2">
 <span class="project-emoji">⛏️</span>
@@ -762,7 +759,7 @@ footer a:hover{opacity:1}
 <p>Desenvolvimento de dashboards interativos em Tableau para monitoramento de indicadores de negócio.</p>
 <div class="project-techs">
 <span class="project-tech">Tableau</span>
-<span class="project-tech">SQL</span>
+<span class="skill-chip">SQL</span>
 <span class="project-tech">BigQuery</span>
 </div>
 </div>
@@ -786,10 +783,12 @@ footer a:hover{opacity:1}
 </div>
 </section>
 
+<!-- MODAL PEPSICO Atualizado -->
 <div class="modal" id="pepsicoModal">
 <div class="modal-box">
 <div class="close" onclick="closeModal()">×</div>
 <h2>PepsiCo México — Dashboard Logístico End-to-End</h2>
+<img class="modal-image" src="mockup-pepsico.png" alt="Mockup Dashboard PepsiCo"/>
 <h4>Contexto</h4>
 <p>Projeto desenvolvido para transformar dados operacionais em uma visão estratégica de acompanhamento logístico, permitindo maior visibilidade dos indicadores e suporte à tomada de decisão.</p>
 <h4>Desafio</h4>
@@ -806,6 +805,7 @@ footer a:hover{opacity:1}
 </div>
 </div>
 
+<!-- EDUCATION -->
 <section id="education">
 <div class="section-inner">
 <p class="eyebrow">Formação</p>
@@ -848,6 +848,7 @@ footer a:hover{opacity:1}
 </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
 <div class="section-inner">
 <div class="contact-grid">
@@ -897,6 +898,7 @@ footer a:hover{opacity:1}
 </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
 <p>© 2025 Lilia Costa · Power Platform &amp; Business Intelligence</p>
 <a href="https://www.linkedin.com/in/" target="_blank">LinkedIn →</a>
