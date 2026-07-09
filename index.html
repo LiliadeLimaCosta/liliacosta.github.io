@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -275,18 +274,13 @@ section{padding:6rem 5%}
   box-shadow:0 16px 48px rgba(37,99,235,0.1);
 }
 .project-top{
-  height:180px;
-  display:flex;align-items:center;justify-content:center;
-  position:relative;overflow:hidden;
-}
-.project-top{
-    position:relative;
-    height:220px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
-    background:#fff;
+  position:relative;
+  height:220px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  background:#fff;
 }
 .pt-1{background:linear-gradient(135deg,#0F1F3D,#1E3A5F)}
 .pt-2{background:linear-gradient(135deg,#1E3A5F,#2563EB)}
@@ -295,6 +289,16 @@ section{padding:6rem 5%}
 .pt-5{background:linear-gradient(135deg,#064E3B,#0F1F3D)}
 .pt-6{background:linear-gradient(135deg,#7C2D12,#1E3A5F)}
 .project-emoji{font-size:2.8rem;position:relative;z-index:1}
+.project-logo-main{
+  max-width:70%;
+  max-height:70%;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+  position:relative;
+  z-index:1;
+  padding:1.5rem;
+}
 .project-company-badge{
   position:absolute;top:12px;right:12px;
   background:rgba(15, 31, 61, 0.6);backdrop-filter:blur(8px);
@@ -716,7 +720,7 @@ footer a:hover{opacity:1}
 <div class="project-card reveal" onclick="openModal('pepsico')">
 <div class="project-top">
 <span class="project-company-badge">PepsiCo</span>
-<img class="modal-image" src="PepsiCo Logo.png" alt="Mockup Dashboard PepsiCo"/>
+<img class="project-logo-main" src="Logo Pepsico.png" alt="Logo PepsiCo"/>
 </div>
 <div class="project-body">
 <h3>Dashboard Logístico End-to-End</h3>
@@ -730,9 +734,9 @@ footer a:hover{opacity:1}
 </div>
 
 <div class="project-card reveal">
-<div class="project-top pt-2">
-<span class="project-emoji">⛏️</span>
+<div class="project-top">
 <span class="project-company-badge">Vale</span>
+<img class="project-logo-main" src="logo-vale.png" alt="Logo Vale"/>
 </div>
 <div class="project-body">
 <h3>BI para Operações de Mineração</h3>
@@ -747,7 +751,7 @@ footer a:hover{opacity:1}
 <div class="project-card reveal" onclick="openModal('abb')">
 <div class="project-top">
 <span class="project-company-badge">ABB</span>
-<img alt="Aplicativo de Expedição ABB" src="logo-abb.png"/>
+<img class="project-logo-main" src="logo-abb.png" alt="Logo ABB"/>
 </div>
 <div class="project-body">
 <h3>Aplicações Corporativas Power Apps</h3>
@@ -761,9 +765,9 @@ footer a:hover{opacity:1}
 </div>
 
 <div class="project-card reveal">
-<div class="project-top pt-4">
-<span class="project-emoji">🧪</span>
+<div class="project-top">
 <span class="project-company-badge">Ads Tigre</span>
+<img class="project-logo-main" src="logo-adstigre.png" alt="Logo Ads Tigre"/>
 </div>
 <div class="project-body">
 <h3>Business Intelligence Comercial</h3>
@@ -776,9 +780,9 @@ footer a:hover{opacity:1}
 </div>
 
 <div class="project-card reveal">
-<div class="project-top pt-5">
-<span class="project-emoji">📊</span>
+<div class="project-top">
 <span class="project-company-badge">Oi</span>
+<img class="project-logo-main" src="Logo Oi.JPG" alt="Logo Oi"/>
 </div>
 <div class="project-body">
 <h3>Dashboards Executivos em Tableau</h3>
@@ -792,9 +796,9 @@ footer a:hover{opacity:1}
 </div>
 
 <div class="project-card reveal">
-<div class="project-top pt-6">
-<span class="project-emoji">🔋</span>
+<div class="project-top">
 <span class="project-company-badge">Baterias Moura</span>
+<img class="project-logo-main" src="Logo Moura.JPG" alt="Logo Baterias Moura"/>
 </div>
 <div class="project-body">
 <h3>Migração e Otimização de BI</h3>
